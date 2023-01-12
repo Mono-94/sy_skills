@@ -41,7 +41,7 @@ UpdateSkill = function(skill, amount)
         if Config.NotifyType == 'ox' then
             lib.notify({
                 title = locale('rewardtitle'),  
-                description = "+" .. amount .. locale('rewardDesc') .. skill,
+                description = "+" .. amount .. locale('rewardDesc') .. Config.Skills[skill].SkillLang,
                 position = 'bottom',
                 style = {
                     backgroundColor = '#141517',
@@ -51,7 +51,7 @@ UpdateSkill = function(skill, amount)
                 iconColor = '#C53030'
             })
         elseif Config.NotifyType == "esx" then
-            ESX.ShowNotification(locale('rewardtitle') .. amount .. locale('rewardDesc') .. skill) 
+            ESX.ShowNotification(locale('rewardtitle') .. amount .. locale('rewardDesc') .. Config.Skills[skill].SkillLang) 
         end
     end
 
