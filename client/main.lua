@@ -75,7 +75,7 @@ Citizen.CreateThread(function()
 						if weapon then 
 							lib.notify({
 								title = locale('skills'),  
-								description = locale('weaponcheck1')..v.xp..locale('weaponcheck2')..skill,
+								description = locale('weaponcheck1')..v.xp..locale('weaponcheck2')..Config.Skills[skill].SkillLang,
 								position = 'bottom',
 								style = {
 									backgroundColor = '#141517',
